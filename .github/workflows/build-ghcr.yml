@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  call-build:
+    uses: nandbox-bot/shared-ci/.github/workflows/build-ghcr.yml@main
+    
+    with:
+      image_tag: 1
+
+    secrets:
+      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
