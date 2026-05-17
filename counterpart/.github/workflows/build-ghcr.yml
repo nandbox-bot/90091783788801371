@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync:
+    uses: nandbox-bot/shared-ci/.github/workflows/build-ghcr.yml@main
+    secrets:
+      ORG_PAT: ${{ secrets.ORG_PAT }}
