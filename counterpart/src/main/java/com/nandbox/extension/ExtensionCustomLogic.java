@@ -84,7 +84,7 @@ public class ExtensionCustomLogic extends ExtensionAdapter {
 
         if (lower.equals("/start") || lower.equals("start")) {
             sendTextSafe(chatId,
-                    "Your handy weather guide\n\nCommands PUBLIC no sync:\n/weather <city>\n/forecast <city>",
+                    "Your handy weather guide\n\nCommands PUBLIC lets goo:\n/weather <city>\n/forecast <city>",
                     reference, userId, chatSettings, appId);
             return;
         }
