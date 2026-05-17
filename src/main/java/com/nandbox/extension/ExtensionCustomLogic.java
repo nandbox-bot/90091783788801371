@@ -84,7 +84,7 @@ public class ExtensionCustomLogic extends ExtensionAdapter {
 
         if (lower.equals("/start") || lower.equals("start")) {
             sendTextSafe(chatId,
-                    "Your handy weather guide\n\nCommands12345:\n/weather <city>\n/forecast <city>",
+                    "Your handy weather guide\n\nCommands:\n/weather <city>\n/forecast <city>",
                     reference, userId, chatSettings, appId);
             return;
         }
