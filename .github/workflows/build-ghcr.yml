@@ -2,14 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
 
 jobs:
-  call-build:
-    uses: nandbox-bot/shared-ci/.github/workflows/build-ghcr.yml@main
-    
-    with:
-      image_tag: 2
+  sync:
+    if: "!contains(github.event.head_commit.message, '[sync-bot]')"
 
-    secrets:
-      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+    uses: nandbox-bot/shared-ci/.github/workflows/build-ghcr.yml@main
